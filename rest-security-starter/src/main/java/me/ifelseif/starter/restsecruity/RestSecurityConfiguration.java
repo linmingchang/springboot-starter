@@ -70,7 +70,7 @@ public class RestSecurityConfiguration extends WebSecurityConfigurerAdapter {
                 ).permitAll()
                 // 对于获取token的rest api要允许匿名访问
                 //todo 可配置
-                .antMatchers("/app/aex/**", "/app/auth/**", "/app/coin_put_in/**", "/admin/auth/**", "/autoload-cache/**").permitAll()
+                .antMatchers("/app/resource/**", "/app/aex/**", "/app/auth/**", "/app/coin_put_in/**", "/admin/auth/**", "/autoload-cache/**").permitAll()
                 // 除上面外的所有请求全部需要鉴权认证
                 .anyRequest().authenticated();
 
